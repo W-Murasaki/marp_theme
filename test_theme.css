@@ -23,18 +23,6 @@ section {
   /* ★ 青色の実線を下端に追加 */
 }
 
-section.title h2 {
-  font-size: 80px !important;
-  line-height: 1.1;
-  margin: 0;
-}
-
-section.title h3 {
-  font-size: 60px !important;
-  line-height: 1.1;
-  margin: 0;
-}
-
 /* デフォルトより文字を小さくするクラス */
 section.small-text {
   font-size: 28px;
