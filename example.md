@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: test_theme
+theme: presentation_theme
 math: katex
 ---
 
