@@ -58,33 +58,16 @@ section h1 {
   position: absolute;
   top: 15px;
   /* 上端から15px */
-  left: 10px;
-  /* 左端から10px */
+  left: 40px;
+  /* 本文（padding-left: 40px）と左端をそろえる */
   display: block;
-
-  /* 線のための余白 (テキストの前に空間を作る) */
-  padding-left: 20px;
+  padding-left: 0;
 
   /* H1の文字色やフォント設定 */
   color: #006CD5;
   font-size: 44pt;
   font-weight: bold;
   margin: 0;
-}
-
-/* 2. タイトル左の短い青線 */
-section h1::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  /* 文字の縦中央に配置 */
-  transform: translateY(-50%);
-  left: -20px;
-  /* H1の左側に飛び出させる */
-  width: 100px;
-  height: 6px;
-  background-color: #006CD5;
 }
 
 /* https://github.com/marp-team/marpit/issues/271 */

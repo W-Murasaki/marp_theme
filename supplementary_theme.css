@@ -1,0 +1,134 @@
+/* @theme supplementary_theme */
+
+/*
+ * Supplementary 資料用 Marp テーマ
+ * レイアウトは presentation_theme と同じ。違いは次の3点：
+ *   - ページ番号が「S1, S2, ...」形式
+ *   - タイトル左の青線・下端の青線なし
+ *   - 色は黒・グレー中心のシンプル配色
+ */
+
+@import 'gaia';
+
+:root {
+  --color-background: #fff;
+  --color-foreground: #333;
+  --color-highlight: #000;
+  /* 太字：色ではなく太さで強調 */
+  --color-title: #222;
+  /* 見出しの色 */
+  --color-muted: #777;
+  /* ページ番号・注釈の色 */
+}
+
+section {
+  background-image: none;
+  font-family: 'Yu Gothic', 'Segoe UI';
+  font-size: 32px;
+  padding-top: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-bottom: 6px solid var(--color-title);
+  /* 下端の黒線（presentation_theme の青線と同じ太さ） */
+}
+
+/* デフォルトより文字を小さくするクラス */
+section.small-text {
+  font-size: 28px;
+}
+
+/* デフォルトより文字を大きくするクラス */
+section.large-text {
+  font-size: 40px;
+}
+
+section strong {
+  color: var(--color-highlight);
+}
+
+section.title h2 {
+  font-size: 80px !important;
+}
+
+section.title h3 {
+  font-size: 60px !important;
+  line-height: 1.1;
+  margin: 0;
+}
+
+section.title :not(h2):not(h3) {
+  font-size: 48px !important;
+  line-height: 1.2 !important;
+}
+
+/* スライドタイトル：presentation_theme と同じ位置（線なし） */
+section h1 {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  /* 本文と左端をそろえる */
+  display: block;
+  padding-left: 0;
+  color: var(--color-title);
+  font-size: 44pt;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* ページ番号：S1, S2, ... */
+section::after {
+  content: 'S' attr(data-marpit-pagination);
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--color-muted);
+}
+
+ul ul {
+  font-size: 0.9em;
+}
+
+/* 表紙など（class: lead） */
+section.lead h1,
+section.lead h2,
+section.lead h3,
+section.lead h4,
+section.lead h5 {
+  color: var(--color-title);
+  text-align: left;
+}
+
+section.lead p {
+  text-align: right;
+}
+
+header {
+  background-color: #eee;
+  color: var(--color-title);
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+blockquote {
+  max-width: 90%;
+  border-top: 0.1em dashed #555;
+  font-size: 60%;
+  position: absolute;
+  bottom: 20px;
+}
+
+blockquote::before {
+  content: "";
+}
+
+blockquote::after {
+  content: "";
+}
+
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+}
